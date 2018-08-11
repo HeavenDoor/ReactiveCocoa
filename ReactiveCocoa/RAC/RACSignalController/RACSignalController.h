@@ -1,20 +1,20 @@
 /*******************************************************************************
- # File        : NSUserDefaultsController.h
+ # File        : RACSignalController.h
  # Project     : ReactiveCocoa
  # Author      : shenghai
- # Created     : 2018/8/10
+ # Created     : 2018/8/11
  # Corporation : 成都
  # Description :
- <#Description Logs#>
+ Description Logs
  -------------------------------------------------------------------------------
- # Date        : <#Change Date#>
- # Author      : <#Change Author#>
+ # Date        : Change Date
+ # Author      : Change Author
  # Notes       :
- <#Change Logs#>
+ Change Logs
  ******************************************************************************/
 
 #import <UIKit/UIKit.h>
 
-@interface NSUserDefaultsController : UIViewController
+@interface RACSignalController : UIViewController
 
 @end

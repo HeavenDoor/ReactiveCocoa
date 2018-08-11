@@ -1,22 +1,26 @@
 /*******************************************************************************
- # File        : SignalForControlEventsController.m
+ # File        : RACWeakifyController.m
  # Project     : ReactiveCocoa
  # Author      : shenghai
- # Created     : 2018/8/10
+ # Created     : 2018/8/11
  # Corporation : 成都
  # Description :
- Description Logs
+ <#Description Logs#>
  -------------------------------------------------------------------------------
- # Date        : Change Date
- # Author      : Change Author
+ # Date        : <#Change Date#>
+ # Author      : <#Change Author#>
  # Notes       :
- Change Logs
+ <#Change Logs#>
  ******************************************************************************/
 
-#import "SignalForControlEventsController.h"
-#import "UIButton+Block.h"
+#import "RACWeakifyController.h"
 
-@interface SignalForControlEventsController ()
+
+#pragma mark - 这是一个入参为nil就会崩溃的函数
+void crashSelfnil(id obj) {
+    assert(obj);
+}
+@interface RACWeakifyController ()
 
 @property (nonatomic, strong) UIButton *button;
 
@@ -24,7 +28,7 @@
 
 @end
 
-@implementation SignalForControlEventsController
+@implementation RACWeakifyController
 
 #pragma mark ----------------------------- 生命周期 ------------------------------
 - (void)viewDidLoad {
@@ -34,6 +38,7 @@
     // 配置UI
     [self configUI];
 }
+
 
 - (void)dealloc {
     NSLog(@"=====%@被销毁了=====", [self class]);
@@ -55,6 +60,8 @@
         make.height.mas_equalTo(kViewSize6(120));
     }];
     
+    
+    
     @weakify(self)
     [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         NSLog(@"rac_signalForControlEvents 回调事件触发");
@@ -63,10 +70,43 @@
     }];
     
     
-    self.button.clickBlock = ^{
-        NSLog(@"clickedBloack 事件回调");
-        self_weak_.label.text = @"使用Block不注意循环引用会出大问题";
-    };
+    /**
+     使用倒计时和crashSelfnil只是为了模拟一种场景，
+     有些传入参数为nil的函数会导致崩溃
+     比如网络请求使用了dispatch_group
+     dispatch_group_leave(self.group)传空值会崩溃
+     */
+    [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        NSLog(@"rac_signalForControlEvents 回调事件触发");
+        self_weak_.label.text = @"循环引用 退出不会调dealloc";
+        [[RACScheduler mainThreadScheduler] afterDelay:15 schedule:^{
+            //crashSelfnil(self_weak_);
+        }];
+    }];
+    
+    /** 解决方案
+    [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        NSLog(@"rac_signalForControlEvents 回调事件触发");
+        self_weak_.label.text = @"循环引用 退出不会调dealloc";
+        [[RACScheduler mainThreadScheduler] afterDelay:15 schedule:^{
+            crashSelfnil(self_weak_);
+        }];
+    }]; */
+    
+    
+    /** 在block里面使用的__strong修饰的weakSelf是为了在函数生命周期中防止self提前释放。
+     strongSelf是一个自动变量当block执行完毕就会释放自动变量strongSelf不会对self进行一直进行强引用
+     */
+    [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        NSLog(@"rac_signalForControlEvents 回调事件触发");
+        self_weak_.label.text = @"循环引用 退出不会调dealloc";
+        @strongify(self)
+        [[RACScheduler mainThreadScheduler] afterDelay:15 schedule:^{
+            crashSelfnil(self);
+        }];
+    }];
+    
+    
     
     self.label = [[UILabel alloc] init];
     self.label.textColor = [UIColor darkGrayColor];
@@ -79,18 +119,11 @@
     self.label.text = @"呵呵呵呵";
 }
 
+
+
 #pragma mark - 初始化数据
 - (void)configData {
     
 }
-
-/*
- 使用block替换target-action原理
- 创建一个控件的category 如UIButton+Block
- 在category中添加block属性 由于category不支持添加属性，
- 所以使用到运行时方法objc_setAssociatedObject 和 objc_getAssociatedObject
- 在category中设置blcok的时候调用target-action，action中调用block对象
- 这样就实现了控件创建和回调的代码在同一个代码块中，会提高查找（开发）效率，但是要注意blcok使用中不小心出现的循环引用问题
- */
 
 @end

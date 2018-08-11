@@ -4,15 +4,39 @@
 <array>
 	<dict>
 		<key>title</key>
+		<string>rac 控件事件改Block 方法及原理</string>
+		<key>className</key>
+		<string>SignalForControlEventsController</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>NSUserDefaults事件监听</string>
 		<key>className</key>
 		<string>NSUserDefaultsController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>rac 控件事件改Block 方法及原理</string>
+		<string>调试技巧</string>
 		<key>className</key>
-		<string>SignalForControlEventsController</string>
+		<string>DebugSkillsController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>RACSignal详解</string>
+		<key>className</key>
+		<string>RACSignalController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>@weakify(Obj)和@strongify(Obj)</string>
+		<key>className</key>
+		<string>RACWeakifyController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>RACTuplePack&amp;RACTupleUnpack</string>
+		<key>className</key>
+		<string>RACTupleController</string>
 	</dict>
 </array>
 </plist>

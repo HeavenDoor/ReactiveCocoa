@@ -19,6 +19,10 @@
 		4A4F98DF211D7FCF008BFF48 /* SignalForControlEventsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F98DE211D7FCF008BFF48 /* SignalForControlEventsController.m */; };
 		4A4F98E2211D8D2E008BFF48 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F98E1211D8D2E008BFF48 /* UIButton+Block.m */; };
 		4A4F98E6211D9937008BFF48 /* NSUserDefaultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F98E5211D9937008BFF48 /* NSUserDefaultsController.m */; };
+		4A4F98EA211ECD67008BFF48 /* DebugSkillsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F98E9211ECD67008BFF48 /* DebugSkillsController.m */; };
+		4A4F98EE211ED73C008BFF48 /* RACSignalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F98ED211ED73C008BFF48 /* RACSignalController.m */; };
+		4A4F98F2211EE304008BFF48 /* RACWeakifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F98F1211EE304008BFF48 /* RACWeakifyController.m */; };
+		4A4F98F6211EED30008BFF48 /* RACTupleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F98F5211EED30008BFF48 /* RACTupleController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,14 @@
 		4A4F98E1211D8D2E008BFF48 /* UIButton+Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
 		4A4F98E4211D9937008BFF48 /* NSUserDefaultsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsController.h; sourceTree = "<group>"; };
 		4A4F98E5211D9937008BFF48 /* NSUserDefaultsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsController.m; sourceTree = "<group>"; };
+		4A4F98E8211ECD67008BFF48 /* DebugSkillsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugSkillsController.h; sourceTree = "<group>"; };
+		4A4F98E9211ECD67008BFF48 /* DebugSkillsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugSkillsController.m; sourceTree = "<group>"; };
+		4A4F98EC211ED73C008BFF48 /* RACSignalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACSignalController.h; sourceTree = "<group>"; };
+		4A4F98ED211ED73C008BFF48 /* RACSignalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACSignalController.m; sourceTree = "<group>"; };
+		4A4F98F0211EE304008BFF48 /* RACWeakifyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACWeakifyController.h; sourceTree = "<group>"; };
+		4A4F98F1211EE304008BFF48 /* RACWeakifyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACWeakifyController.m; sourceTree = "<group>"; };
+		4A4F98F4211EED30008BFF48 /* RACTupleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACTupleController.h; sourceTree = "<group>"; };
+		4A4F98F5211EED30008BFF48 /* RACTupleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACTupleController.m; sourceTree = "<group>"; };
 		5BFA03EF49E8203955EB8802 /* libPods-ReactiveCocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocoa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BA7047226F43652E61B128 /* Pods-ReactiveCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +158,10 @@
 		4A4F98D8211D7F9A008BFF48 /* RAC */ = {
 			isa = PBXGroup;
 			children = (
+				4A4F98F3211EED26008BFF48 /* RACTupleController */,
+				4A4F98EF211EE2F9008BFF48 /* RACWeakifyController */,
+				4A4F98EB211ED730008BFF48 /* RACSignalController */,
+				4A4F98E7211ECD5C008BFF48 /* DebugSkillsController */,
 				4A4F98E3211D992C008BFF48 /* NSUserDefaultsController */,
 				4A4F98D9211D7F9A008BFF48 /* SignalForControlEventsController */,
 			);
@@ -170,6 +186,42 @@
 				4A4F98E5211D9937008BFF48 /* NSUserDefaultsController.m */,
 			);
 			path = NSUserDefaultsController;
+			sourceTree = "<group>";
+		};
+		4A4F98E7211ECD5C008BFF48 /* DebugSkillsController */ = {
+			isa = PBXGroup;
+			children = (
+				4A4F98E8211ECD67008BFF48 /* DebugSkillsController.h */,
+				4A4F98E9211ECD67008BFF48 /* DebugSkillsController.m */,
+			);
+			path = DebugSkillsController;
+			sourceTree = "<group>";
+		};
+		4A4F98EB211ED730008BFF48 /* RACSignalController */ = {
+			isa = PBXGroup;
+			children = (
+				4A4F98EC211ED73C008BFF48 /* RACSignalController.h */,
+				4A4F98ED211ED73C008BFF48 /* RACSignalController.m */,
+			);
+			path = RACSignalController;
+			sourceTree = "<group>";
+		};
+		4A4F98EF211EE2F9008BFF48 /* RACWeakifyController */ = {
+			isa = PBXGroup;
+			children = (
+				4A4F98F0211EE304008BFF48 /* RACWeakifyController.h */,
+				4A4F98F1211EE304008BFF48 /* RACWeakifyController.m */,
+			);
+			path = RACWeakifyController;
+			sourceTree = "<group>";
+		};
+		4A4F98F3211EED26008BFF48 /* RACTupleController */ = {
+			isa = PBXGroup;
+			children = (
+				4A4F98F4211EED30008BFF48 /* RACTupleController.h */,
+				4A4F98F5211EED30008BFF48 /* RACTupleController.m */,
+			);
+			path = RACTupleController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4F98BA211D75E2008BFF48 /* ViewController.m in Sources */,
+				4A4F98EA211ECD67008BFF48 /* DebugSkillsController.m in Sources */,
+				4A4F98F2211EE304008BFF48 /* RACWeakifyController.m in Sources */,
+				4A4F98F6211EED30008BFF48 /* RACTupleController.m in Sources */,
 				4A4F98E6211D9937008BFF48 /* NSUserDefaultsController.m in Sources */,
 				4A4F98D5211D7CB4008BFF48 /* ZXControllerManager.m in Sources */,
+				4A4F98EE211ED73C008BFF48 /* RACSignalController.m in Sources */,
 				4A4F98DF211D7FCF008BFF48 /* SignalForControlEventsController.m in Sources */,
 				4A4F98C5211D75E4008BFF48 /* main.m in Sources */,
 				4A4F98E2211D8D2E008BFF48 /* UIButton+Block.m in Sources */,

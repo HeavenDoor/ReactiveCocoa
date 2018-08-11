@@ -1,8 +1,8 @@
 /*******************************************************************************
- # File        : NSUserDefaultsController.h
+ # File        : DebugSkillsController.h
  # Project     : ReactiveCocoa
  # Author      : shenghai
- # Created     : 2018/8/10
+ # Created     : 2018/8/11
  # Corporation : 成都
  # Description :
  <#Description Logs#>
@@ -15,6 +15,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NSUserDefaultsController : UIViewController
+@interface DebugSkillsController : UIViewController
 
 @end
