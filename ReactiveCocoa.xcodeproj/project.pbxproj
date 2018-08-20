@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4256C460A6B441A36B3DE678 /* libPods-ReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFA03EF49E8203955EB8802 /* libPods-ReactiveCocoa.a */; };
 		4A199D41212AADAB00156FD9 /* MergeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A199D40212AADAB00156FD9 /* MergeController.m */; };
+		4A199D47212AC45700156FD9 /* RACController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A199D46212AC45700156FD9 /* RACController.m */; };
+		4A199D4A212AC46700156FD9 /* RACObserveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A199D49212AC46700156FD9 /* RACObserveController.m */; };
 		4A4F98B7211D75E2008BFF48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F98B6211D75E2008BFF48 /* AppDelegate.m */; };
 		4A4F98BA211D75E2008BFF48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F98B9211D75E2008BFF48 /* ViewController.m */; };
 		4A4F98BF211D75E4008BFF48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F98BE211D75E4008BFF48 /* Assets.xcassets */; };
@@ -30,6 +32,10 @@
 		31E3276E76D15140C7D377FC /* Pods-ReactiveCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa.release.xcconfig"; sourceTree = "<group>"; };
 		4A199D3F212AADAB00156FD9 /* MergeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeController.h; sourceTree = "<group>"; };
 		4A199D40212AADAB00156FD9 /* MergeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MergeController.m; sourceTree = "<group>"; };
+		4A199D45212AC45700156FD9 /* RACController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACController.h; sourceTree = "<group>"; };
+		4A199D46212AC45700156FD9 /* RACController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACController.m; sourceTree = "<group>"; };
+		4A199D48212AC46700156FD9 /* RACObserveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACObserveController.h; sourceTree = "<group>"; };
+		4A199D49212AC46700156FD9 /* RACObserveController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACObserveController.m; sourceTree = "<group>"; };
 		4A4F98B2211D75E2008BFF48 /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4F98B5211D75E2008BFF48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A4F98B6211D75E2008BFF48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +108,24 @@
 			path = MergeController;
 			sourceTree = "<group>";
 		};
+		4A199D43212AC44300156FD9 /* RACController */ = {
+			isa = PBXGroup;
+			children = (
+				4A199D45212AC45700156FD9 /* RACController.h */,
+				4A199D46212AC45700156FD9 /* RACController.m */,
+			);
+			path = RACController;
+			sourceTree = "<group>";
+		};
+		4A199D44212AC44400156FD9 /* RACObserveController */ = {
+			isa = PBXGroup;
+			children = (
+				4A199D48212AC46700156FD9 /* RACObserveController.h */,
+				4A199D49212AC46700156FD9 /* RACObserveController.m */,
+			);
+			path = RACObserveController;
+			sourceTree = "<group>";
+		};
 		4A4F98A9211D75E2008BFF48 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +194,8 @@
 		4A4F98D8211D7F9A008BFF48 /* RAC */ = {
 			isa = PBXGroup;
 			children = (
+				4A199D43212AC44300156FD9 /* RACController */,
+				4A199D44212AC44400156FD9 /* RACObserveController */,
 				4A199D42212AADB800156FD9 /* MergeController */,
 				4A4F98F3211EED26008BFF48 /* RACTupleController */,
 				4A4F98EF211EE2F9008BFF48 /* RACWeakifyController */,
@@ -358,7 +384,9 @@
 				4A4F98DF211D7FCF008BFF48 /* SignalForControlEventsController.m in Sources */,
 				4A199D41212AADAB00156FD9 /* MergeController.m in Sources */,
 				4A4F98C5211D75E4008BFF48 /* main.m in Sources */,
+				4A199D47212AC45700156FD9 /* RACController.m in Sources */,
 				4A4F98E2211D8D2E008BFF48 /* UIButton+Block.m in Sources */,
+				4A199D4A212AC46700156FD9 /* RACObserveController.m in Sources */,
 				4A4F98B7211D75E2008BFF48 /* AppDelegate.m in Sources */,
 				4A4F98D6211D7CB4008BFF48 /* ZXNavigationController.m in Sources */,
 			);

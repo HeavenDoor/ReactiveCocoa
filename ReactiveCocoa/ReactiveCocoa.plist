@@ -244,21 +244,21 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>aaa</string>
-		<key>className</key>
-		<string>bbb</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>aaa</string>
-		<key>className</key>
-		<string>bbb</string>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>merge 操作详解</string>
 		<key>className</key>
 		<string>MergeController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>RACObserve宏</string>
+		<key>className</key>
+		<string>RACObserveController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>RAC宏</string>
+		<key>className</key>
+		<string>RACController</string>
 	</dict>
 	<dict>
 		<key>title</key>
