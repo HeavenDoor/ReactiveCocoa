@@ -256,9 +256,9 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>aaa</string>
+		<string>merge 操作详解</string>
 		<key>className</key>
-		<string>bbb</string>
+		<string>MergeController</string>
 	</dict>
 	<dict>
 		<key>title</key>
