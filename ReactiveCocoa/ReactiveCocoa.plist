@@ -208,43 +208,43 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>aaa</string>
+		<string>flattenMap 操作</string>
 		<key>className</key>
-		<string>bbb</string>
+		<string>FlattenMapController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>aaa</string>
+		<string>map 操作</string>
 		<key>className</key>
-		<string>bbb</string>
+		<string>MapController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>aaa</string>
+		<string>combineLatest reduce 操作</string>
 		<key>className</key>
-		<string>bbb</string>
+		<string>CombineLatestController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>aaa</string>
+		<string>then 操作</string>
 		<key>className</key>
-		<string>bbb</string>
+		<string>ThenController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>aaa</string>
+		<string>zip 操作</string>
 		<key>className</key>
-		<string>bbb</string>
+		<string>ZipController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>aaa</string>
+		<string>concat 操作</string>
 		<key>className</key>
-		<string>bbb</string>
+		<string>ConcatController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>merge 操作详解</string>
+		<string>merge 操作</string>
 		<key>className</key>
 		<string>MergeController</string>
 	</dict>
